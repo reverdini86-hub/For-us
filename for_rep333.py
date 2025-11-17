@@ -13,6 +13,21 @@ def is_password_good(password):
         elif a.isdigit():
             a3 = True
         return a1 and a2 and a3
+from password_check import is_password_good
 
+print("=== ПРОВЕРКА ПАРОЛЯ ===")
+
+password = input("Введите пароль: ")
+result = is_password_good(password)
+
+if result:
+    print("Пароль надежный")
+else:
+    print(" Пароль ненадежный")
+    print("Требования:")
+    print("- Не менее 8 символов")
+    print("- Заглавные и строчные буквы") 
+    print("- Цифры")
 n = input()
+
 print(is_password_good(n))
